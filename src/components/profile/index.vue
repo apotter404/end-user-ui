@@ -24,6 +24,9 @@
                         <fr-consent v-if="$root.userStore.state.internalUser === false" :consentedMappings="profile.consentedMappings" @updateProfile="updateProfile"></fr-consent>
                         <fr-account-controls></fr-account-controls>
                     </b-tab>
+                    <b-tab :title="$t('Stuff')">
+                        <fr-stuff/>
+                    </b-tab>
                 </b-tabs>
             </b-col>
         </b-row>
@@ -55,7 +58,8 @@
             'fr-trusted-devices': () => import('@/components/profile/TrustedDevices'),
             'fr-authorized-applications': () => import('@/components/profile/AuthorizedApplications'),
             'fr-consent': () => import('@/components/profile/Consent'),
-            'fr-social-identities': () => import('@/components/profile/SocialIdentities')
+            'fr-social-identities': () => import('@/components/profile/SocialIdentities'),
+            'fr-stuff': () => import('@/components/profile/Stuff')
         },
         mounted () {
             if (this.openProfile) {

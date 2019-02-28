@@ -15,6 +15,9 @@
                     <li>
                         <router-link :to="{ name: 'Profile'}"><i class="fa fa-fw mr-3 fa-street-view"></i><span class="sidebar-item-text">{{$t('pages.app.profile')}}</span></router-link>
                     </li>
+                    <li>
+                        <router-link :to="{ name: 'Stuff'}"><i class="fa fa-fw mr-3 fa-location-arrow"></i><span class="sidebar-item-text">{{$t('pages.app.profile')}}</span></router-link>
+                    </li>
                     <li v-if="$root.applicationStore.state.amDataEndpoints && this.$root.userStore.state.internalUser === false">
                         <router-link :to="{ name: 'Sharing'}"><i class="fa fa-fw mr-3 fa-share"></i><span class="sidebar-item-text">{{$t('pages.app.sharing')}}</span></router-link>
                     </li>

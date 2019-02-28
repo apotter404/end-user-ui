@@ -71,6 +71,13 @@ export default new Router({
             }
         },
         {
+            path: '/stuff',
+            name: 'Stuff',
+            props: true,
+            component: () => import('@/components/profile/Stuff'),
+            meta: { authenticate: true }
+        },
+        {
             path: '/registration',
             name: 'Registration',
             component: () => import('@/components/selfservice/registration'),
